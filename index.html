@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="webpage development, programming, computing">
+	<meta name="description" content="Self Introduction Page">
+	<meta name="author" content="LEUNG Po Man 20021242G">	
+	<style>
+		h1{
+			color: #B71E42;
+			text-align: center;
+			text-shadow: 2px 1px #DE478E;
+		}		
+		p.myname{
+			font: 18px;
+			font-weight: bold;
+			color: #BC72F0;
+		}
+		p.content{
+			line-height: 1.5;
+			font-size: 16px;
+		}
+		p.contact{
+			font-size: 17px;
+			font-weight: bold;
+			text-indent: 135px;
+			color: #795FAF;
+		}
+		p.mycanvas{
+			text-indent: 100px;
+		}
+		ul{
+			padding-left: 150px;
+		}
+		body{
+			background-image: url("picture/wallpaper.png");
+			font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+		}
+		img.myprofile{
+			width: 120px;
+			border-radius: 60px;
+			float: left;
+			margin-right: 15px;
+		}
+		hr{
+			height: 2px;
+			border-width: 0;
+			margin-left: 120px; 
+			color: #B71E42;
+			background-color: #B71E42;
+		}
+		img.scheme{
+			border-radius: 50%;
+			float: left;
+			margin-right: 15px;
+		}
+		table{
+			text-align: left;
+			padding-top: 15px;
+		}
+		caption{
+			font-size: 17px;
+			font-weight: bold;
+			height: 18px;
+			padding-top: 10px;
+			color: #82377C;
+		}
+		td{
+			height: 20px;
+		}
+		td.click{
+			vertical-align: bottom;
+			color: #B71E42;
+		}
+	</style>	
+	<!--This is a title.-->
+	<title>Homepage</title>
+</head>
+<body>
+	<!--This is a headline.-->
+	<h1>Introduction</h1>
+	<!--This is a picture element.-->
+	<picture>
+		<source media="(min-width: 900px)" srcset="picture/pearl.jpg" width="200">
+		<source media="(min-width: 600px)" srcset="picture/html5.jpg" width="200">
+		<!--This is my picture.-->
+		<img class="myprofile" src="picture/css.png" alt="My profile image">
+	</picture>
+	<!--This is my name.-->
+	<p class="myname">LEUNG Po Man, 20021242G</p>
+	<!--This is my introduction.-->
+	<p class="content">I am a part-time student of Poly U. Since I am interested in webpage development and programming, therefore I have chosen to study Internet Computing and Applications in this semester. My favourite website is <a href="https://www.w3schools.com/html/" target="_blank">w3schools</a> because we can practice our coding skills in HTML and CSS there. I hope that we can master the webpage development after studied this wonderful course. </p>
+	<!--This is a list.-->
+	<p class="contact">Contact
+		<ul>
+			<!--This is a hyperlink.-->
+			<li>Email: <a href="mailto:pearl852.leung@connect.polyu.hk">pearl852.leung@connect.polyu.hk</a></li>
+			<li>Address: The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong</li>
+		</ul>
+	</p>
+	<!--This is a canvas.-->
+	<p class="mycanvas">
+		<canvas id="mycanvas" width="300" height="100"></canvas>
+		<script>
+		var char=document.getElementById("mycanvas");
+		var text=char.getContext("2d");
+		text.font="30px Curlz MT";
+		text.fillStyle="#954A78";
+		text.fillText("Let's get vaccinated!",35,60);
+		</script>
+	</p>
+	<!--This is a line.-->
+	<hr>
+	<p>
+		<img class="scheme" src="picture/vaccination.png" alt="Vaccination schemes" usemap="#mymap">
+		<!--This is an image map.-->
+		<map name="mymap">
+			<area shape="poly" coords="260,61,388,62,405,74,405,196,41,194,40,184,16,182,29,161,11,150,29,140,43,83,61,46,72,48,73,73,253,72" alt="Vaccination schemes" href="https://www.chp.gov.hk/tc/features/17980.html">
+		</map>
+	</p>
+	<!--This is a table.-->
+ 	<table>
+		<caption>Government Vaccination Programme (GVP) 2021 - 2022</caption>
+		<tr>
+			<th>Start Date:</th>
+			<td colspan="2">6 Oct 2021</td>
+		</tr>
+		<tr>
+			<th rowspan="2">Target audience:</th>
+			<td>Eligible groups for free seasonal influenza vaccination</td>
+		</tr>
+		<tr>
+			<td>Eligible elderly aged 65 years or above for free pneumococcal vaccination</td>
+		</tr>
+		<tr>
+			<td class="click" colspan="2">← Click on the image to check more details</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<!--This is a form.-->
+				<form action="" method="get">
+					<p>
+						Would you consider to take a flu shot?
+					</p>
+						<input type="radio" name="buttons" value="1"/>Yes
+						<input type="radio" name="buttons" value="2"/>No
+						<p>	
+							<input type="submit" name="Submit" value="Submit">
+						</p>
+				</form>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
